@@ -66,6 +66,7 @@ const Shop = () => {
 			<div className='cart-container'>
 				<Cart cart={cart}></Cart>
 			</div>
+			hi
 		</div>
 	);
 };
