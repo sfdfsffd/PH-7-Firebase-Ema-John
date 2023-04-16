@@ -5,9 +5,29 @@
 	padding: 8px;
 	height: 107 px;
 	border-radius: 8px;
-}
 
+	display: flex;
+}
 .Item img {
 	height: 91px;
 	width: 91px;
+}
+.text-orange {
+	color: orange;
+}
+.review-details {
+	margin-left: 15px;
+}
+.review-details p {
+	font-weight: 600;
+	margin-left: 25px;
+	margin: 0;
+	padding: 5px;
+}
+.btn-delete {
+	margin-left: auto;
+	background-color: orange;
+	border-radius: 100px;
+	padding: 15px;
+	color: white;
 }
