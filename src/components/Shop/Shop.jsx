@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import "./Shop.css";
 import Cart from "../Cart/Cart";
-import { addToDb, getShoppingCart } from "../../utilities/fakedb";
+import {
+	addToDb,
+	deleteShoppingCart,
+	getShoppingCart,
+} from "../../utilities/fakedb";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
 	const [products, setProducts] = useState([]);
@@ -51,7 +57,10 @@ const Shop = () => {
 		setCart(newCart);
 		addToDb(product.id);
 	};
-
+	const handleToClear = () => {
+		setCart([]);
+		deleteShoppingCart();
+	};
 	return (
 		<div className='shop-container'>
 			<div className='products-container'>
@@ -64,7 +73,15 @@ const Shop = () => {
 				))}
 			</div>
 			<div className='cart-container'>
-				<Cart cart={cart}></Cart>
+				<Cart cart={cart} handleToClear={handleToClear}>
+					<div>
+						<Link to='/order-review' className="link">
+							<button className='btn-proceed'>
+								Review Order <ArrowRightIcon className='btn-icon' />
+							</button>
+						</Link>
+					</div>
+				</Cart>
 			</div>
 		</div>
 	);

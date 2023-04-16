@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Cart from "../Cart/Cart";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import "./OrderReview.css";
 import { deleteShoppingCart, removeFromDb } from "../../utilities/fakedb";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 const OrderReview = () => {
 	const savedCart = useLoaderData();
@@ -31,7 +32,15 @@ const OrderReview = () => {
 				))}
 			</div>
 			<div className='cart-container'>
-				<Cart cart={cart} handleToClear={handleToClear}></Cart>
+				<Cart cart={cart} handleToClear={handleToClear}>
+					<div>
+						<Link to='/order-review' className='link'>
+							<button className='btn-proceed'>
+								Proceed Checkout <ArrowRightIcon className='btn-icon' />
+							</button>
+						</Link>
+					</div>
+				</Cart>
 			</div>
 		</div>
 	);
