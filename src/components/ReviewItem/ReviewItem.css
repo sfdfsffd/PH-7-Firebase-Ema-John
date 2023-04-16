@@ -1,0 +1,13 @@
+.Item {
+	border: 2px solid;
+	width: 574px;
+	margin-bottom: 25px;
+	padding: 8px;
+	height: 107 px;
+	border-radius: 8px;
+}
+
+.Item img {
+	height: 91px;
+	width: 91px;
+}
