@@ -8,3 +8,17 @@
 .cart p {
 	font-size: 17px;
 }
+.btn-clear {
+	display: flex;
+	align-items: center;
+	background-color: red;
+	color: white;
+	width: 100%;
+	justify-content: space-between;
+}
+.btn-icon-clear {
+	color: white;
+	margin-left: 15px;
+	height: 25px;
+	width: 25px;
+}
