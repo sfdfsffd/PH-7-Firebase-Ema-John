@@ -5,10 +5,10 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop/Shop";
-import Orders from "./components/Orders/Orders";
 import OrderReview from "./components/OrderReview/OrderReview";
 import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
+import cartProductsLoader from "./loaders/CartProducts";
 
 const router = createBrowserRouter([
 	{
@@ -22,6 +22,8 @@ const router = createBrowserRouter([
 			{
 				path: "order-review",
 				element: <OrderReview />,
+				// loader: () => fetch("/products.json"),
+				loader:  cartProductsLoader,
 			},
 			{
 				path: "inventory",
