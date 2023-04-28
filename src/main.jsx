@@ -9,6 +9,7 @@ import OrderReview from "./components/OrderReview/OrderReview";
 import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
 import cartProductsLoader from "./loaders/CartProducts";
+import SignUp from "./components/SignUp/SignUp";
 
 const router = createBrowserRouter([
 	{
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
 				path: "order-review",
 				element: <OrderReview />,
 				// loader: () => fetch("/products.json"),
-				loader:  cartProductsLoader,
+				loader: cartProductsLoader,
 			},
 			{
 				path: "inventory",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
 			{
 				path: "login",
 				element: <Login />,
+			},
+			{
+				path: "signup",
+				element: <SignUp />,
 			},
 		],
 	},
