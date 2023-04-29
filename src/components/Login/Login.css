@@ -46,8 +46,23 @@
 	background: rgba(255, 153, 0, 0.6);
 	border-radius: 5px;
 	border: none;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .btn-submit:hover {
 	background: rgba(255, 153, 0, 0.3);
+}
+.text-link {
+	font-size: 20px;
+	text-align: center;
+	font-weight: 400;
+}
+.link {
+	color: rgba(209, 127, 4, 0.902);
+	font-weight: 500;
+}
+.error-text {
+	color: rgba(203, 0, 0, 0.922);
+	font-weight: 600px;
+	text-align: center;
+	font-size: 17px;
 }

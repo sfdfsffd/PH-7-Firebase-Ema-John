@@ -7,3 +7,9 @@
 6. Create Signup and Login Route
 
 */
+
+/* 
+1. Create a context provider file
+2. create a context and export
+3. Set the children props
+*/
