@@ -15,7 +15,7 @@ const Header = () => {
 				<Link to='/inventory'>Manage Inventory</Link>
 				<Link to='/login'>Login</Link>
 				<Link to='/signup'>Sign up</Link>
-				{user.displayName}
+				{user && user.email}
 			</div>
 		</nav>
 	);

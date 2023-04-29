@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/AuthProvider";
 
 const SignUp = () => {
+	const { createUser } = useContext(AuthContext);
 	const [error, setError] = useState("");
+
 	const handleSignUp = (event) => {
 		setError("");
 		event.preventDefault();
@@ -20,6 +23,16 @@ const SignUp = () => {
 			setError("Your password should be min 6 char");
 			return;
 		}
+
+		createUser(email, password)
+			.then((result) => {
+				const loggedUser = result.user;
+				console.log(loggedUser);
+			})
+			.catch((error) => {
+				console.log(error);
+				setError(error.message);
+			});
 	};
 	return (
 		<div className='form-container'>
