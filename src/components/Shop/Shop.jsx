@@ -75,9 +75,9 @@ const Shop = () => {
 			<div className='cart-container'>
 				<Cart cart={cart} handleToClear={handleToClear}>
 					<div>
-						<Link to='/order-review' className="link">
+						<Link to='/order-review' className='link'>
 							<button className='btn-proceed'>
-								Review Order <ArrowRightIcon className='btn-icon' />
+								Review Orders <ArrowRightIcon className='btn-icon' />
 							</button>
 						</Link>
 					</div>
