@@ -33,6 +33,7 @@ const SignUp = () => {
 				console.log(error);
 				setError(error.message);
 			});
+		form.reset();
 	};
 	return (
 		<div className='form-container'>
